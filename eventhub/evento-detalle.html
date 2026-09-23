@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub - Detalle del Evento</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Barra de navegación (Reutilizada) -->
+    <nav class="navbar">
+        <a href="eventos.html" class="navbar-brand">EventHub</a>
+        <div class="navbar-menu">
+            <span class="user-greeting">Hola, jperez</span>
+            <a href="index.html" class="btn btn-outline" style="padding: 0.4rem 1rem;">Cerrar sesión</a>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="page-content">
+        <a href="eventos.html" class="back-link">← Volver al listado</a>
+
+        <!-- Información General del Evento (F5) -->
+        <section class="card">
+            <span class="event-date">15 Oct 2026 - 17 Oct 2026</span>
+            <h1 class="logo-title" style="margin: 0.5rem 0; font-size: 2.5rem;">Jornadas de Desarrollo Web</h1>
+            <p style="color: var(--text-muted); font-weight: 500; margin-bottom: 1.5rem;">Organizado por: jperez</p>
+            <p>Únete a nosotros en este encuentro de tres días diseñado para estudiantes y profesionales. Exploraremos las últimas tendencias en frameworks de JavaScript, diseño UI/UX, accesibilidad y arquitecturas backend escalables. Habrá charlas, talleres prácticos y networking.</p>
+        </section>
+
+        <!-- Panel de Gestión: Solo visible si eres el organizador -->
+        <section class="card organizer-panel">
+            <h2 class="panel-title">⚙️ Panel de Organizador</h2>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Como creador de este evento, tienes acceso a estas acciones:</p>
+            <div class="action-buttons">
+                <!-- (F7) Editar evento (Simulamos que va a un formulario) -->
+                <button class="btn btn-outline" style="width: auto;">Editar Evento</button>
+                <!-- (F8) Eliminar evento -->
+                <button class="btn btn-danger" style="width: auto;">Eliminar Evento</button>
+                <!-- (F9) Crear nueva actividad -->
+                <button class="btn" style="width: auto;">+ Nueva Actividad</button>
+            </div>
+        </section>
+
+        <!-- Listado de Actividades -->
+        <section>
+            <h2 style="margin-bottom: 1.5rem; color: var(--text-main);">Actividades Programadas</h2>
+            
+            <!-- Actividad 1 (F6) -->
+            <div class="card activity-card">
+                <div class="activity-info">
+                    <h4>Novedades en CSS (Grid y Subgrid)</h4>
+                    <div class="activity-meta">
+                        <span>📅 15 Oct 2026</span>
+                        <span>⏰ 10:00 - 11:30</span>
+                    </div>
+                    <span class="badge">Plazas: 12 / 50</span>
+                </div>
+                <!-- Te lleva al detalle de esta actividad concreta -->
+                <a href="actividad-detalle.html" class="btn btn-outline" style="width: auto;">Ver actividad</a>
+            </div>
+
+            <!-- Actividad 2 -->
+            <div class="card activity-card">
+                <div class="activity-info">
+                    <h4>Taller Práctico: Introducción a React</h4>
+                    <div class="activity-meta">
+                        <span>📅 16 Oct 2026</span>
+                        <span>⏰ 16:00 - 19:00</span>
+                    </div>
+                    <span class="badge" style="color: #ea580c; border-color: #ffedd5;">Plazas: 30 / 30 (Completo)</span>
+                </div>
+                <a href="actividad-detalle.html" class="btn btn-outline" style="width: auto;">Ver actividad</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

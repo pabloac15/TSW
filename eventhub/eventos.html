@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub - Eventos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Barra de navegación superior -->
+    <nav class="navbar">
+        <a href="eventos.html" class="navbar-brand">EventHub</a>
+        <div class="navbar-menu">
+            <span class="user-greeting">Hola, jperez</span>
+            <!-- (F2) Simula cerrar sesión volviendo al index -->
+            <a href="index.html" class="btn btn-outline" style="padding: 0.4rem 1rem;">Cerrar sesión</a>
+        </div>
+    </nav>
+
+    <!-- Cabecera de la página -->
+    <header class="page-header">
+        <h2>Próximos Eventos</h2>
+        <!-- (F4) Botón para crear un nuevo evento -->
+        <a href="crear-evento.html" class="btn" style="width: auto;">+ Crear Evento</a>
+    </header>
+
+    <!-- (F3) Listado de eventos -->
+   <!-- (F3) Listado de eventos -->
+    <main class="events-grid">
+        
+        <!-- Evento 1 -->
+        <div class="card event-card" onclick="window.location.href='evento-detalle.html'">
+            <!-- Imagen cargada desde tu carpeta local -->
+            <img src="img/desarrolloweb.jpg" alt="Conferencia de Desarrollo Web" class="event-image">
+            
+            <div class="event-content">
+                <span class="event-date">15 Oct 2026 - 17 Oct 2026</span>
+                <h3 class="event-title">Jornadas de Desarrollo Web</h3>
+                <p class="event-desc">Un encuentro de tres días para aprender sobre las últimas tecnologías en el mundo del frontend y backend.</p>
+                <span class="text-link" style="margin-top: auto;">Ver detalles →</span>
+            </div>
+        </div>
+
+        <!-- Evento 2 -->
+        <div class="card event-card" onclick="window.location.href='evento-detalle.html'">
+            <!-- Imagen cargada desde tu carpeta local -->
+            <img src="img/hacker.jpg" alt="Hackathon Ourense" class="event-image">
+            
+            <div class="event-content">
+                <span class="event-date">10 Nov 2026 - 12 Nov 2026</span>
+                <h3 class="event-title">Hackathon Ourense 2026</h3>
+                <p class="event-desc">48 horas de programación ininterrumpida para crear soluciones innovadoras. Habrá pizza y premios.</p>
+                <span class="text-link" style="margin-top: auto;">Ver detalles →</span>
+            </div>
+        </div>
+
+        <!-- Evento 3 -->
+        <div class="card event-card" onclick="window.location.href='evento-detalle.html'">
+            <!-- Imagen cargada desde tu carpeta local -->
+            <img src="img/ciberseguridad.jpg" alt="Taller de Ciberseguridad" class="event-image">
+            
+            <div class="event-content">
+                <span class="event-date">05 Dic 2026 - 05 Dic 2026</span>
+                <h3 class="event-title">Taller de Ciberseguridad</h3>
+                <p class="event-desc">Aprende a proteger tus aplicaciones web de las vulnerabilidades más comunes del top 10 de OWASP.</p>
+                <span class="text-link" style="margin-top: auto;">Ver detalles →</span>
+            </div>
+        </div>
+        
+    </main>
+</body>
+</html>

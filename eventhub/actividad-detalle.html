@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub - Detalle de Actividad</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <a href="eventos.html" class="navbar-brand">EventHub</a>
+        <div class="navbar-menu">
+            <span class="user-greeting">Hola, jperez</span>
+            <a href="index.html" class="btn btn-outline" style="padding: 0.4rem 1rem;">Cerrar sesión</a>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <!-- Volver al evento padre -->
+        <a href="evento-detalle.html" class="back-link">← Volver al evento</a>
+
+        <!-- Información de la Actividad (F6) -->
+        <section class="card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <span class="event-date">Pertenece a: Jornadas de Desarrollo Web</span>
+                    <h1 class="logo-title" style="margin: 0.5rem 0; font-size: 2rem;">Novedades en CSS (Grid y Subgrid)</h1>
+                    <div class="activity-meta" style="margin-top: 1rem;">
+                        <span>📅 15 Oct 2026</span>
+                        <span>⏰ 10:00 - 11:30</span>
+                    </div>
+                </div>
+                
+                <!-- (F6) Aforo y Estado -->
+                <div style="text-align: right; background-color: var(--bg-color); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.2rem;">Plazas ocupadas</p>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">12 / 50</p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 1.5rem;">
+                En esta charla repasaremos las últimas especificaciones de CSS Grid y cómo implementar Subgrid para crear layouts complejos y perfectamente alineados sin ensuciar nuestro HTML con contenedores innecesarios.
+            </p>
+            
+            <!-- Acciones de Usuario (F12, F13) -->
+            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light);">
+                <!-- Simulamos que el usuario NO está inscrito, por lo que ve el botón de inscribirse -->
+                <button class="btn" style="width: auto;">Inscribirse en la actividad</button>
+                
+                <!-- Nota para el profesor: Si estuviera inscrito, vería este otro botón en lugar del anterior:
+                <button class="btn btn-outline" style="width: auto; color: #ef4444; border-color: #ef4444;">Cancelar inscripción</button>
+                -->
+            </div>
+        </section>
+
+        <!-- Panel de Gestión: Solo visible si eres el organizador -->
+        <section class="card organizer-panel">
+            <h2 class="panel-title">⚙️ Panel de Organizador (Actividad)</h2>
+            <div class="action-buttons">
+                <!-- (F10) Editar actividad -->
+                <button class="btn btn-outline" style="width: auto;">Editar Actividad</button>
+                <!-- (F11) Eliminar actividad -->
+                <button class="btn btn-danger" style="width: auto;">Eliminar Actividad</button>
+            </div>
+        </section>
+
+        <!-- (F6) Listado de usuarios actualmente inscritos -->
+        <section class="card" style="padding: 2rem;">
+            <h3 style="margin-bottom: 0.5rem; color: var(--text-main);">Usuarios Inscritos (12)</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Cualquier usuario autenticado puede ver esta lista.</p>
+            
+            <ul class="users-list">
+                <li class="user-item">
+                    <div class="user-avatar">A</div>
+                    <span>ana_dev</span>
+                </li>
+                <li class="user-item">
+                    <div class="user-avatar" style="background: var(--text-muted);">C</div>
+                    <span>carlos99</span>
+                </li>
+                <li class="user-item">
+                    <div class="user-avatar" style="background: #e11d48;">M</div>
+                    <span>maria_web</span>
+                </li>
+                <li class="user-item">
+                    <div class="user-avatar" style="background: #f97316;">P</div>
+                    <span>pablo_code</span>
+                </li>
+                <!-- ... el resto de inscritos ... -->
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

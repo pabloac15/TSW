@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub - Crear Evento</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <a href="eventos.html" class="navbar-brand">EventHub</a>
+        <div class="navbar-menu">
+            <span class="user-greeting">Hola, jperez</span>
+            <a href="index.html" class="btn btn-outline" style="padding: 0.4rem 1rem;">Cerrar sesión</a>
+        </div>
+    </nav>
+
+    <!-- Contenedor del formulario (Reutilizamos page-content pero más estrecho) -->
+    <main class="page-content" style="max-width: 600px;">
+        <a href="eventos.html" class="back-link">← Volver al listado</a>
+        
+        <div class="card" style="margin-top: 2rem;">
+            <h1 class="logo-title" style="font-size: 2rem;">Crear Nuevo Evento</h1>
+            <p class="subtitle" style="text-align: left; margin-bottom: 2rem;">
+                Completa los datos a continuación. Al crearlo, serás asignado automáticamente como el organizador.
+            </p>
+            
+            <!-- El formulario simula la creación y nos lleva al detalle del evento -->
+            <form action="evento-detalle.html" method="GET">
+                
+                <div class="form-group">
+                    <label for="nombre">Nombre del evento</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. Jornadas de Desarrollo Web">
+                </div>
+                
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" required placeholder="Explica brevemente de qué trata este evento..."></textarea>
+                </div>
+                
+                <!-- Usamos flexbox en línea para poner las fechas juntas -->
+                <div style="display: flex; gap: 1.5rem;">
+                    <div class="form-group" style="flex: 1;">
+                        <label for="fechaInicio">Fecha de inicio</label>
+                        <input type="date" id="fechaInicio" name="fechaInicio" required>
+                    </div>
+                    
+                    <div class="form-group" style="flex: 1;">
+                        <label for="fechaFin">Fecha de fin</label>
+                        <input type="date" id="fechaFin" name="fechaFin" required>
+                    </div>
+                </div>
+                
+                <!-- Nota visual para el requisito de validación de fechas -->
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: -1rem; margin-bottom: 2rem;">
+                    * Recuerda: La fecha de inicio no puede ser posterior a la fecha de fin.
+                </p>
+                
+                <!-- Botones de acción -->
+                <div style="display: flex; gap: 1rem;">
+                    <button type="submit" class="btn" style="flex: 2;">Crear Evento</button>
+                    <!-- El botón cancelar es un simple enlace con aspecto de botón secundario -->
+                    <a href="eventos.html" class="btn btn-outline" style="flex: 1; text-align: center; display: flex; align-items: center; justify-content: center;">
+                        Cancelar
+                    </a>
+                </div>
+                
+            </form>
+        </div>
+    </main>
+</body>
+</html>
